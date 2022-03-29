@@ -1,0 +1,6 @@
+Django==2.0.1
+pytz==2017.3
+django-nose
+whitenoise
+django-crispy-forms
+dj-static

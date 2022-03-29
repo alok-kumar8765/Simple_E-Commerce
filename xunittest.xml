@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="5" errors="1" failures="0" skip="0"><testcase classname="test_urls.TestProductUrls" name="test_product_detail" time="0.537"></testcase><testcase classname="test_urls.TestCartUrls" name="test_cart_add_urls" time="0.013"></testcase><testcase classname="test_urls.TestCartUrls" name="test_cart_details_urls" time="0.011"></testcase><testcase classname="test_urls.TestOrderUrls" name="test_order_create_urls" time="0.022"></testcase><testcase classname="test_urls.TestOrderUrls1" name="test_order_create_urls" time="0.003"><error type="django.db.utils.OperationalError" message="no such table: main.shop_product__old"><![CDATA[Traceback (most recent call last):
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: main.shop_product__old
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alokk\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 60, in testPartExecutor
+    yield
+  File "C:\Users\alokk\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 672, in run
+    self._callSetUp()
+  File "C:\Users\alokk\AppData\Local\Programs\Python\Python38\lib\unittest\case.py", line 630, in _callSetUp
+    self.setUp()
+  File "C:\Users\alokk\Documents\e-commerce-project\tests\test_urls.py", line 148, in setUp
+    OrderItem.objects.create(id=1, price=1000, quantity=1, order_id=1, product_id=1)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\query.py", line 417, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\base.py", line 728, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\base.py", line 759, in save_base
+    updated = self._save_table(raw, cls, force_insert, force_update, using, update_fields)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\base.py", line 842, in _save_table
+    result = self._do_insert(cls._base_manager, using, fields, update_pk, raw)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\base.py", line 879, in _do_insert
+    return manager._insert([self], fields=fields, return_id=update_pk,
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\manager.py", line 82, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\query.py", line 1125, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\models\sql\compiler.py", line 1281, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\utils.py", line 68, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\utils.py", line 77, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\utils.py", line 89, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\utils.py", line 85, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\alokk\Downloads\e-commerce-project\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 303, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: main.shop_product__old
+]]></error></testcase></testsuite>
